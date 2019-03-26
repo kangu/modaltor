@@ -111,11 +111,11 @@ export default {
         this.isOpen = true;
         setTimeout(() => (this.open = true), 30);
         if (this.closeScroll) {
-          this._lockBody();
+          // this._lockBody();
         }
       } else {
         if (this.closeScroll) {
-          this._unlockBody();
+          // this._unlockBody();
         }
         this.open = false;
         setTimeout(() => (this.isOpen = false), 300);
@@ -130,7 +130,7 @@ export default {
   destroyed() {
     if (this.open) {
       if (this.closeScroll) {
-        this._unlockBody();
+        // this._unlockBody();
       }
       this.open = false;
       setTimeout(() => (this.isOpen = false), 300);
@@ -205,7 +205,7 @@ export default {
       -o-transform: scale(-1, 1);
       transform: scale(-1, 1);
     }
-    
+
   }
   &-wrapper-show{
     &.modal-fade,&.modal-scale{
@@ -277,7 +277,7 @@ export default {
     &.modal-slide-bottom {
       transform: translate(0, 100%);
     }
-    
+
     &::-webkit-scrollbar-track {
       -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
       background-color: #f5f5f5;
